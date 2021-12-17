@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <object id="wordPrintActiveX" width=0 height=0 classid="clsid:F8CFFFD2-4F58-4E1B-AB76-5DFDBD4FCEFE"></object>
+  <button onClick="print()">打印</button>
+  <button onClick="printPDF()">打印pdf</button>
+  <button onClick="batchPrint()">批量打印</button>
+  <button onClick="batchPrintAndPdf()">批量打印pdf和word</button>
+<script>
+  function print() {
+    try {
+      var word = 'https://xatjtest.olcourt.cn/upload/archive/2021/11/22/4-1637546728534.doc'
+      wordPrintActiveX.batchPrint(word)
+      console.log('打印结束')
+    } catch (e) {
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+            console.log("sd.file.print.control.download")
+        } else {
+            console.log("sd.ie.not.support.file.print")
+        }
+    }
+
+  }
+  function printPDF() {
+    try {
+      var word = 'http://xatjtest.olcourt.cn/upload/diploms/2021/11/15/原告-法人1-诉前调解通知书-1636966754692.pdf'
+      wordPrintActiveX.batchPrint(word)
+      console.log('打印结束')
+    } catch (e) {
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+            console.log("sd.file.print.control.download")
+        } else {
+            console.log("sd.ie.not.support.file.print")
+        }
+    }
+  }
+  function batchPrintAndPdf() {
+    try {
+      var word = "http://xatjtest.olcourt.cn/upload/archive/2021/11/22/4-1637546728534.doc,http://xatjtest.olcourt.cn/upload/diploms/2021/11/15/原告-法人1-诉前调解通知书-1636966754692.pdf"
+      wordPrintActiveX.batchPrint(word)
+      console.log('打印结束')
+    } catch (e) {
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+            console.log("sd.file.print.control.download")
+        } else {
+            console.log("sd.ie.not.support.file.print")
+        }
+    }
+  }
+  function batchPrint() {
+    try {
+      var word = "http://xatjtest.olcourt.cn/upload/archive/2021/11/22/4-1637546728534.doc,http://xatjtest.olcourt.cn/upload/archive/2021/11/22/4-1637546728534.doc"
+      wordPrintActiveX.batchPrint(word)
+      console.log('打印结束')
+    } catch (e) {
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+            console.log("sd.file.print.control.download")
+        } else {
+            console.log("sd.ie.not.support.file.print")
+        }
+    }
+  }
+</script>
+</body>
+</html>

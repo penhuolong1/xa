@@ -1,0 +1,154 @@
+.ant-layout {
+  background-color: transparent;
+}
+.ant-btn {
+  border-radius: 2px;
+}
+
+// 按钮颜色类型添加
+.ant-btn-primary {
+  background-color: @theme-color;
+  border-color: @theme-color;
+  &:hover {
+    background-color: @theme-color-hover;
+    border-color: @theme-color-hover;
+  }
+  &:focus {
+    background-color: @theme-color-hover;
+    border-color: @theme-color-hover;
+  }
+}
+.ant-btn.ant-btn-blue1{
+  color: #fff;
+  background-color: @blue-1;
+  border-color: @blue-1;
+  &:hover {
+    background-color: @blue-1-hover;
+    border-color: @blue-1-hover;
+  }
+}
+.ant-btn.ant-btn-blue2{
+  color: #fff;
+  background-color: @blue-2;
+  border-color: @blue-2;
+  &:hover {
+    background-color: @blue-2-hover;
+    border-color: @blue-2-hover;
+  }
+}
+.ant-btn.ant-btn-blue4{
+  color: #fff;
+  background-color: @blue-4;
+  border-color: @blue-4;
+  &:hover {
+    background-color: @blue-4-hover;
+    border-color: @blue-4-hover;
+  }
+}
+.ant-btn.ant-btn-blue3{
+  color: #fff;
+  background-color: @blue-3;
+  border-color: @blue-3;
+  &:hover {
+    background-color: @blue-3-hover;
+    border-color: @blue-3-hover;
+  }
+}
+.ant-btn.ant-btn-blue5{
+  color: #fff;
+  background-color: @blue-5;
+  border-color: @blue-5;
+  &:hover {
+    background-color: @blue-5-hover;
+    border-color: @blue-5-hover;
+  }
+}
+.ant-btn.ant-btn-green{
+  color: #fff;
+  background-color: @btn3-color;
+  border-color: @btn3-color;
+  &:hover {
+    background-color: @btn3-color-hover;
+    border-color: @btn3-color-hover;
+  }
+}
+.ant-btn.ant-btn-org{
+  color: #fff;
+  background-color: @btn2-color;
+  border-color: @btn2-color;
+  &:hover {
+    background-color: @btn2-color-hover;
+    border-color: @btn2-color-hover;
+  }
+}
+.ant-form-item {
+  margin-bottom: 10px;
+}
+.ant-table-body {
+  overflow: auto!important;
+}
+.xa-menu .ant-menu-inline-collapsed > .ant-menu-item, .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item, .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+  padding: 0 22px!important;
+}
+
+// 修改步骤条
+.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+  background: @blue-3;
+}
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
+  background: @blue-3;
+}
+.ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+  background: @blue-3;
+}
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+  color: @blue-3;
+}
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+  color: @blue-3;
+}
+
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
+  color: @theme-color;
+}
+
+.ant-divider-horizontal {
+  margin: 20px 0;
+}
+
+.ant-calendar-picker {
+  width: 100%;
+}
+
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  background: @theme-color;
+  border-color: @theme-color;
+}
+
+// .ant-form-item {
+//   display: flex;
+//   align-items: center;
+// }
+
+.ant-form-item-label {
+  // line-height: 1.5;
+  white-space: break-spaces;
+}
+
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+  text-align: center;
+}
+
+.ant-form-item.required {
+  .ant-form-item-label {
+    label::before {
+      display: inline-block;
+      margin-right: 4px;
+      color: #f5222d;
+      font-size: 14px;
+      font-family: SimSun, sans-serif;
+      line-height: 1;
+      content: '*';
+    }
+  }
+}

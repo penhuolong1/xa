@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>扫描</title>
+		<script language="javascript" type="text/javascript" src="./static/jquery-3.6.0.min.js" ></script>
+
+		<!--以下代码用于监听控件内置上传按钮点击事件 -->
+		<script language="javascript" event="OnUploadBtnClick()" for="scaner1">
+			ajax_post_2(); //在ajax.js里面
+		</script>
+	</head>
+	<body>
+		<form action="" name="form1" id="form1"
+				method="post" enctype="multipart/form-data">
+			<input type="hidden" id="picData" name="picData"/>
+			<input type="hidden" id="picExt"  name="fileSystemId"/>
+			<p>
+				<button type="button" id="btnScan">扫描</button>
+				<button type="button" id="btnUpload2">保存成图片</button>
+				<button type="button" id="btnUpload3">保存成pdf</button>
+			</p>
+			<object classid="clsid:15D142CD-E529-4B01-9D62-22C9A6C00E9B" id="scaner1" name="scaner1" width="100%" height="600"
+				codebase="./static/ScanOnWeb.cab">
+				<param name="licenseMode" value="3">
+		    <param name="key1" value="x0lbq5F+SeVz7OtZ++8mYdX6SpwGdyZ+JKU3ePv2jteULudJLQHjykc5dAvmeRtx1JLJK718bv1Isak9H2YNctn5pbC3f9DFU/hHF2mUhGCW/QxsH54cSsKj7zKN4jGDNi9gYtwh3JkLMkoqWvFvGHyQo7xDfo7MYQ0kgwERPASIk5McUbaugwO+KgVpwTJiiUvd5Y0lMVKCAInB">
+		    <param name="key2" value="txeYCNeaRSbEzhPVpW+TMbalA0AptfuqR9ycI+w2yQkjUHfPbH4G9aJJjydCq5nrZ4HQgYsXrQgDAcuuyGMs/5UWr92MAMm/2qIazStw4GeKHNAnX6Pwz3wAfx899GrG4UcKjglC1unE7/gX3zkXqG0k4y5j25gMlajbcOZOeDgj+yJ+3ZSg3F/0RbQqXseqGWNlsfNBM1bb3ff6r4TOG0GXQEteAtXVQOtd2zfnByHhSivgE3AxXa3IsbjLUEe9peYyxywFLsBF2Rzi1s/ZtX/tLM5Ti+UCmjc/JOBvFFpXmjiuh/GgYTlfbkcxY+zsyNDVKwV1SSK4vGINRNoXw3S1vlgzqxB5UnMUxR1WQz+5iweFNzSxcGbRb1gwqM09jdhPNbHAjR4m2bo4/wCUZ4qLGnYmf+gt2qIjBhcuR9WvQAwkXkntj8ItvpsLwl3YnBaL+H6GUOInSRwOCk8nJ2dR/wo4e/LCkJb9UPBua4TLSpn/BAw1Q8+lFIYhJuJg7+fnPRy6n9o98eSVCRP1YRyiFlGZmJWnYDjWsGb+AEbte/RrVO3mHQu98/PBfQInhuHerFmAF39nB1xzPI5sVY97l/F31BNy5jcqJw0ZKpt169KvByuiXIMIZgopiHEkziLuDImek3E5t3KcMjmlIpErmwkcm9UGkDKmKDrSLauIKCqr5prfP+Q6O2/oEkJoNWWepFCt0dnXnjoqdnymZsg+AZmBlcwPgaoKWfy2O6Q2nyrvvXBTUIiHxPztOQnRrbEALxgRbj0zsgQ8KwAbe8NIJ4KeQGf14NcfzEE07zs10OtttcBSlgSu52IcVpGG+y8k3Q6BoO3xogjZqdeZ6pKH2XKr5STAFvTpVBdxWu7csCXTND5mRLJMApo0l3+iMUhGZxAoOaAguZ8eLKJt382jVz1LrY9xNBeP9+wAU3T2jLhxpf8rdiGmB51PoLkncPTrE9OuzqSf/5KeHQZTq/CtTylHto/Mr1XUnS/Yh9m1uf/VkM+g/YafZXlQGw2vDuz7UXVHIRpvn32BmZK5hlGwAT8FAqQMJJSkyyuT2NHNSeGxELVe/2Vfa5RdnWDlQK0jIFJfSzBM+eSutDgOEqPSAL/syt+VzNgedpMvKkMibmrP+cqk2ttDlLrUsy27KIZ9/giuBCX1CE/scAOhEE0nMn+VazR4fnxe54OyYYUgyEn7poiCavkTSJFuKOkvbKynO6p4fDhyA1wyL4nhMZKpGrUkHrqtv16DZLtwfopMidofF633Q924aqcoFldFs5XDssbwagqbOQuqSuzAhlQ+riLI/5QWByInMqkKVtlE4B/FYtvaAOaUHNJseiGpkqKC/zjLO2ZUGJjvGtFu5O2viBnjEd3MR435Q7Yud18AqlKt/LU3NgeGuJ07tgujR0wKwx8itJYPqGHWnC20DonFHAPOSsgBj457yFYoX53u1rhz2aubPi+KHYl3o4FPb3q1D5O9xy0=">
+		    <param name="Visible" value="0">
+		    <param name="AutoScroll" value="0">
+		    <param name="AutoSize" value="0">
+		    <param name="AxBorderStyle" value="1">
+		    <param name="Caption" value="scaner">
+		    <param name="Color" value="4278190095">
+		    <param name="Font" value="宋体">
+		    <param name="KeyPreview" value="0">
+		    <param name="PixelsPerInch" value="96">
+		    <param name="PrintScale" value="1">
+		    <param name="Scaled" value="-1">
+		    <param name="DropTarget" value="0">
+		    <param name="HelpFile" value>
+		    <param name="PopupMode" value="0">
+		    <param name="ScreenSnap" value="0">
+		    <param name="SnapBuffer" value="10">
+		    <param name="DockSite" value="0">
+		    <param name="DoubleBuffered" value="0">
+		    <param name="ParentDoubleBuffered" value="0">
+		    <param name="UseDockManager" value="0">
+		    <param name="Enabled" value="-1">
+		    <param name="AlignWithMargins" value="0">
+		    <param name="ParentCustomHint" value="-1">
+			</object>
+		</form>
+		<script>
+			var caseId = ''
+			var contentsId = ''
+			var type = ''
+			$(function() {
+				document.getElementById('scaner1').dupx = true;
+				window.onbeforeunload = function() {
+					destory_activex('scaner1');
+				}
+				getData()
+				$('#btnScan').click(function() {
+					document.getElementById('scaner1').scan();
+				}),
+				$('#btnUpload1').click(function() {
+					ajax_post_1();
+				}),
+				$('#btnUpload2').click(function() {
+					ajax_post_2();
+				})
+				$('#btnUpload3').click(function() {
+					ajax_post_3();
+				})
+			});
+			function getData() {
+				var searchUrl = location.href.split('?')[1]
+				var paramsAry = searchUrl.split('&')
+				var params = {}
+				for(var i = 0; i < paramsAry.length ; i++) {
+					var ary = paramsAry[i].split('=')
+					params[ary[0]] = ary[1]
+				}
+				caseId = params.caseId
+				contentsId = params.fileId
+				type = params.type
+			}
+			function scan(){
+				document.getElementById('scaner1').scan();
+			}
+			function ajax_post_1(caseId, fileId) {
+				var base64_data = 'data:image/jpg;base64,'+document.getElementById('scaner1').jpegBase64Data();
+				window.parent.postMessage({base64: base64_data}, '*')
+			}
+
+			function ajax_post_2() {
+				/*以下代码用于将当前显示页图像转成base64字符串,注意http协议限制base64明文提交数据量一般不能超过2M,测试时请尽量不要扫描太大图像或者太多页
+				* 解决2M数据量限制问题可通过控件内置方法去上传实现
+				* 控件内置上传方法名称叫做 uploadAllAsPDFFormatToServer  uploadAllAsTIFFormatToServer  uploadAllAsEachJpgToServerUrl ,具体方法使用参数见本示例程序上级目录内的pdf或者word说明文件
+				*/
+				//var base64_data = document.getElementById('scaner1').allImageAsTIFFData();
+				var href = 'http://xatjtest.olcourt.cn'
+				if (location.host === 'xatj.olcourt.cn') {
+					href = 'http://xatj.olcourt.cn'
+				}
+				var url = href + "/api/court/archive/file/add?lawCaseId="+caseId+"&contentsId="+contentsId
+				if (type == 2) { // 诉非的卷宗扫描
+					url = href + "/api/sf/archive/file/batchAdd?sfLawCaseId="+caseId+"&catalogId="+contentsId
+				}
+				var result = document.getElementById('scaner1').uploadAllAsEachJpgToServerUrl(url, '123456', '');
+				var datas = JSON.parse(result);
+				if (datas.code == 200) {
+					alert('上传成功')
+					destory_activex()
+					opener.location.reload();
+          window.close();
+				} else {
+					alert(datas.msg)
+				}
+			}
+			function ajax_post_3() {
+				/*以下代码用于将当前显示页图像转成base64字符串,注意http协议限制base64明文提交数据量一般不能超过2M,测试时请尽量不要扫描太大图像或者太多页
+				* 解决2M数据量限制问题可通过控件内置方法去上传实现
+				* 控件内置上传方法名称叫做 uploadAllAsPDFFormatToServer  uploadAllAsTIFFormatToServer  uploadAllAsEachJpgToServerUrl ,具体方法使用参数见本示例程序上级目录内的pdf或者word说明文件
+				*/
+				//var base64_data = document.getElementById('scaner1').allImageAsTIFFData();
+				var href = 'http://xatjtest.olcourt.cn'
+				if (location.host === 'xatj.olcourt.cn') {
+					href = 'http://xatj.olcourt.cn'
+				}
+				var url = href + "/api/court/archive/file/addPrintImg?lawCaseId="+caseId+"&contentsId="+contentsId
+				if (type == 2) { // 诉非的卷宗扫描
+					url = href + "/api/sf/archive/file/batchAdd?sfLawCaseId="+caseId+"&catalogId="+contentsId
+				}
+				var result = document.getElementById('scaner1').uploadAllAsEachJpgToServerUrl(url, '123456', '');
+				var datas = JSON.parse(result);
+				if (datas.code == 200) {
+					alert('上传成功')
+					destory_activex()
+					// opener.location.reload();
+          window.close();
+				} else {
+					alert(datas.msg)
+				}
+			}
+			function err(err) {
+				console.log(err)
+			}
+			function callbackfun1(data) {
+				window.parent.postMessage(data, '*')
+			}
+			function destory_activex(){
+				var active_object_id='scaner1'; //activex的控件id
+				var activex_obj=document.getElementById(active_object_id);
+				var parent_element=activex_obj.parentElement; //找到控件的父元素
+				localStorage.setItem('aaaaa', 1)
+				//删除activex父元素的所有子元素
+				while (parent_element.children.length>0){
+						parent_element.removeChild(parent_element.children[0]);
+				}
+		}
+		</script>
+	</body>
+</html>

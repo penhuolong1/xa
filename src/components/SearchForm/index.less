@@ -1,0 +1,97 @@
+.wrapper {
+  border: 1px solid #DDDFE1;
+  border-radius: 2px;
+  padding: @space-large;
+  .wrapper-btn {
+    /deep/.ant-btn {
+      margin-right: 12px;
+    }
+  }
+  .form-item {
+    margin-top: @space-default;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #D9D9D9;
+    padding-left: 10px;
+    width: 240px;
+    margin-right: @space-large;
+    &.form-item-2 {
+      width: 500px;
+    }
+    &.form-item-3 {
+      width: 740px;
+    }
+    &.form-item-4 {
+      width: 1000px;
+    }
+    &.form-item-5 {
+      width: 100%;
+    }
+    .label {
+      white-space: nowrap;
+    }
+    &:focus-within {
+      border-color: #40a9ff;
+      border-right-width: 1px !important;
+      outline: 0;
+      box-shadow: 0 0 0 2px rgb(24 144 255 / 20%);
+    }
+    /deep/.ant-input-group {
+      display: flex;
+    }
+    // 修改input样式
+    /deep/.ant-input {
+      border: none;
+      color: #828282;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    // 修改select样式
+    /deep/.ant-select {
+      width: 100%;
+    }
+    /deep/.ant-select-open {
+      .ant-select-selection {
+        box-shadow: none;
+      }
+    }
+    /deep/.ant-select-selection__rendered {
+      line-height: 32px;
+    }
+    .case-no-year {
+      width: 120px;
+      /deep/.ant-select-selection {
+        width: 100px;
+      }
+    }
+    .case-no-prefix {
+      width: 140px;
+      /deep/.ant-select-selection {
+        width: 140px;
+      }
+    }
+    /deep/.ant-select-selection {
+      border: none;
+      color: #828282;
+    }
+    /deep/.ant-select-focused .ant-select-selection, .ant-select-selection:focus, .ant-select-selection:active {
+      box-shadow: none;
+    }
+    // 修改时间的样式
+    /deep/.ant-calendar-picker {
+      .ant-input {
+        width: 100%;
+      }
+    }
+    /deep/.ant-calendar-picker:focus .ant-calendar-picker-input:not(.ant-input-disabled) {
+      box-shadow: none;
+    }
+  }
+  /deep/.ant-radio-button-wrapper {
+    height: 34px;
+  }
+  .form-radio-group-buton {
+    margin-right: 20px;
+  }
+}

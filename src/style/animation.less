@@ -1,0 +1,31 @@
+@keyframes animationX {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes animationY {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.enter(@n, @dir, @aniName, @i: 0) when (@i =< @n) {
+  .enter-@{dir}:nth-child(@{i}) {
+    transform: e('translate@{dir}(50px)');
+  }
+  .-enter-@{dir}:nth-child(@{i}) {
+    transform: e('translate@{dir}(-50px)');
+  }
+  * > .enter-@{dir}:nth-child(@{i}),* > .-enter-@{dir}:nth-child(@{i}) {
+    opacity: 0;
+    animation: @aniName 0.4s ease-in-out 0.3s;
+    animation-fill-mode: forwards;
+    animation-delay: (@i / 10s);
+  }
+  .enter(@n, @dir, @aniName, (@i + 1));
+}
+
+.enter(10, X, animationX);
+.enter(10, Y, animationY);

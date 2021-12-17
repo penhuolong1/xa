@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./static/jquery-3.6.0.min.js"></script>
+  <title>登陆页面</title>
+</head>
+<body>
+  <h1>正在登录...</h1>
+  <span>
+    <div id="div"></div>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <button onclick="openUrl()">打开</button>
+  </span>
+  <script>
+    var url = ''
+    const hrefAry = location.href.split('?')
+    document.getElementById('div').innerHTML = location.href
+    const params = {}
+    hrefAry[1].split('&').forEach(item => {
+      const ary = item.split('=')
+      const label = ary[0]
+      const value = ary[1]
+      params[label] = value
+    })
+    document.getElementById('div3').innerHTML = params.trustticket
+    $.ajax({
+      url:"https://xatjtest.olcourt.cn/api/getScheme?trustticket="+params.trustticket,
+      success:function(res){
+        document.getElementById('div').innerHTML = res.code
+        document.getElementById('div1').innerHTML = res.msg
+        document.getElementById('div2').innerHTML = res.scheme
+        if (res.code === 200){
+          alert(res.scheme)
+          url = res.scheme
+          window.open = res.scheme
+          location.href = res.scheme
+        }
+      }}
+    );
+    function openUrl() {
+      // alert(url)
+      // window.open(url)
+      // alert('打开')
+      location.href = 'weixin://dl/business/?t=TPmdLLcnsVv'
+    }
+    // location.href = 'weixin://dl/business/?t=TPmdLLcnsVv'
+  </script>
+</body>
+</html>
